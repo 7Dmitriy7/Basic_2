@@ -10,6 +10,66 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+ <div class="menu-main">
+   <nav class="menu-header">
+    <header class="menu__container">
+      <div class="menu__header menu__header--left">
+        <button class="menu__button" >
+          <img src="icon/close-menu.svg"  alt="Закрыть меню">
+        </button>
+        <button class="menu__button">
+          <img src="icon/logo-menu.svg" alt="Логотип меню">
+        </button>
+      </div>
+      <div class="menu__header menu__header--right">
+        <button class="menu__button">
+          <img src="icon/search.svg" alt="<UNK> <UNK>">
+        </button>
+      </div>
+    </header>
+
+    <div class="menu__main-list">
+      <ul class="menu-list">
+        <li class="menu__item menu__item--style"><a href="#"><img src="icon/slash-menu.svg" alt="" class="menu__icon">Ремонт техники</a></li>
+        <li class="menu__item"><a href="#">Услуги и сервисы</a></li>
+        <li class="menu__item"><a href="#">Корпоративным клиентам</a></li>
+        <li class="menu__item"><a href="#">Продавцам техники</a></li>
+        <li class="menu__item"><a href="#">Партнерам</a></li>
+        <li class="menu__item"><a href="#">Производителям</a></li>
+        <li class="menu__item"><a href="#">Наши сервисные центры</a></li>
+        <li class="menu__item"><a href="#">Контакты</a></li>
+      </ul>
+    </div>
+
+     <div class="empty-block"></div>
+
+     <footer class="menu__footer">
+       <div class="menu__footer-header">
+         <button class="menu__button">
+           <img src="icon/phone-menu.svg" alt="телефон меню">
+         </button>
+         <button class="menu__button">
+           <img src="icon/message-menu.svg" alt="чат меню">
+         </button>
+         <button class="menu__button">
+           <img src="icon/profile.svg" alt="профиль меню">
+         </button>
+       </div>
+
+       <div class="menu__footer-contacts">
+         <a href="mailto:mail@cps.com" class="menu__footer-mail">mail@cps.com</a>
+         <a href="tel:88008908900" class="menu__footer-phone">8 800 890 8900</a>
+       </div>
+
+       <div class="menu__languages">
+         <button class="menu__button-lang menu__button-lang--active" type="button">RU</button>
+         <button class="menu__button-lang" type="button">EN</button>
+         <button class="menu__button-lang" type="button">CH</button>
+       </div>
+     </footer>
+  </nav>
+
+
 
 
   <main class="main">
@@ -50,6 +110,7 @@
           </div>
         </nav>
       </div>
+
     </header>
 
       <section class="main__title">
@@ -99,7 +160,7 @@
               <img class="main__article--picture" src="img/picture.png" alt="картинка с логотипом">
         </div>
       </article>
-
   </main>
+   </div>
  </body>
 </html>

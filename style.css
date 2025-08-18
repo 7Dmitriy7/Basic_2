@@ -83,7 +83,7 @@ body {
 
 .main {
   max-width: 1120px;
-  margin: 0 auto;
+  margin: 0 0;
 }
 
 /*кнопки button*/
@@ -140,10 +140,8 @@ body {
 
 .main__buttons button {
   display: flex;
-
   white-space: nowrap;
   border-radius: 6px;
-
   font-size: 16px;
   flex-shrink: 0;
   line-height: 24px;
@@ -220,9 +218,150 @@ body {
 .main__block-1120-hide {
   display: none;
 }
+                 /*Боковое меню сайта*/
+.menu-main {
+  display: flex;
+
+}
+
+nav.menu-header {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  height: 100vh;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  gap: 46px;
+}
+
+.menu__button {
+  border:  none;
+  background: none;
+  margin: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.menu__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+
+}
+
+.menu__header--left {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding-left: 24px;
+}
+
+.menu__header--right {
+  padding-right: 24px;
+}
+    /*Кнопки меню  */
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.menu__item:not(.menu__item--style) a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1B1C21 ;
+  padding-left: 24px;
+  text-decoration: none;
+}
+
+   /*Подсвечивание кнопок меню при наведении курсора*/
+.menu__item a {
+
+  transition: color 0.3s ease;
+}
+.menu__item--style a:hover {
+  color: rgba(0, 255, 255, 0.8);
+  text-shadow: 0 0 4px rgba(4, 246, 205, 0.3);
+}
+.menu__item:not(.menu__item--style) a:hover {
+  color: rgba(0, 255, 255, 0.8);
+  text-shadow: 0 0 4px rgba(65, 246, 215, 0.3);
+}
+
+.menu__item--style a {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #7E7E82;
+}
+ /*пустой блок*/
+.empty-block {
+ height: 90px;
+}
+
+.menu__footer  {
+  display: flex;
+  flex-direction:  column;
+  gap: 16px;
+}
+
+.menu__footer-header {
+  display: flex;
+  gap: 16px;
+  padding-left: 24px;
+}
+
+.menu__footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left:  24px;
+
+}
+
+.menu__footer-mail {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1B1C21;
+}
+
+.menu__footer-phone {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #1B1C21;
+}
+
+.menu__languages {
+  display: flex;
+  padding-left: 24px;
+  gap: 7px;
+}
+
+.menu__button-lang {
+  border:  none;
+  background: none;
+  margin: 0;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1B1C21;
+}
+
+.menu__button-lang--active {
+  color: #7E7E82;
+}
 /*  320px > <767px */
 @media (min-width: 320px) and (max-width: 767px) {
-
 
   .main {
     display: flex;
@@ -233,14 +372,6 @@ body {
     gap: 16px;
     justify-content: space-between;
   }
-
-  /*.main__title,*/
-  /*.main__buttons,*/
-  /*.main__article {*/
-  /*  display: flex;*/
-  /*  gap:  48px  !important;*/
-
-  /*}*/
 
   .main__article-image img {
     width: 100vw;
@@ -264,7 +395,7 @@ body {
   .main__article {
     padding: 0;
     flex-direction: column;
-    align-items: stretch; /* тянет всех детей по ширине родителя */
+    align-items: stretch; 
   }
 
   .main__article--description {
@@ -313,17 +444,16 @@ body {
 /*  768px > < 1119px*/
 
 @media (min-width: 768px) and (max-width: 1119px) {
+
   .main__container {
     display: flex;
     gap: 16px;
 
   }
 
-
-
   .main__article {
     flex-direction: row;
-    align-items: stretch; /* тянет всех детей по ширине родителя */
+    align-items: stretch;
   }
 
   .main__article > * {
@@ -346,7 +476,7 @@ body {
   }
 
   .main__article--description {
-    width: 100% !important; /* перебивает мой width:490px */
+    width: 100% !important;
     max-width: 100%;
     height: auto;
   }
