@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html
-  lang="ru"
-  xmlns="http://www.w3.org/1999/html"
->
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CPS servise</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -159,7 +157,37 @@
               <img class="main__article--picture" src="img/picture.png" alt="картинка с логотипом">
         </div>
       </article>
+
+      <section class="service__container">
+        <div class="service__container-text">
+          <h2>ремонт техники различных брендов</h2>
+        </div>
+        <div class="service__swiper-wrapper">
+        <div class="swiper service__swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#"><img src="icons_service/lenovo.png" alt="Lenovo"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="icons_service/samsung.png" alt="Samsung"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="icons_service/apple.png" alt="Apple"></a></div>
+            <div class="swiper-slide service__item--hidden-tablet"><a href="#"><img src="icons_service/viewsonic.png" alt="Viewsonic"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="icons_service/bosch.png" alt="Bosch"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="icons_service/hp.png" alt="HP"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="icons_service/acer.png" alt="Acer"></a></div>
+            <div class="swiper-slide service__item--hidden-tablet"><a href="#"><img src="icons_service/sony.png" alt="Sony"></a></div>
+            <div class="swiper-slide service__item--hidden-tablet-desktop"><a href="#"><img src="icons_service/lenovo.png" alt="Lenovo"></a></div>
+            <div class="swiper-slide service__item--hidden-tablet-desktop"><a href="#"><img src="icons_service/samsung.png" alt="Samsung"></a></div>
+            <div class="swiper-slide service__item--hidden-tablet-desktop"><a href="#"><img src="icons_service/apple.png" alt="Apple"></a></div>
+          </div>
+        </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="service__further">
+          <img class="service__further-arrow" src="icon/arrow.svg" alt="стрелка">
+          <a href="#" class="service__further-text">Показать все</a>
+        </div>
+      </section>
   </main>
    </div>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="index.js"></script>
  </body>
 </html>
