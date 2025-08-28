@@ -1,5 +1,8 @@
+
+// свайпер моб
 document.addEventListener('DOMContentLoaded', initSwiper);
 window.addEventListener('resize', initSwiper);
+
 
 let swiperElement = null;
 
@@ -25,13 +28,25 @@ function initSwiper() {
   }
 }
 
+// убирает прыжок при клике на ссылки иконок
+document.addEventListener("DOMContentLoaded", () => {
+  const swiperEl = document.querySelector(".service__swiper");
 
+  if (swiperEl) {
+    swiperEl.addEventListener("click", (event) => {
+      if (event.target.closest ("a[href='#']") ) {
+        event.preventDefault(); //
+      }
+    });
+  }
+});
+
+// показать/скрыть сервисную панель
 document.addEventListener("DOMContentLoaded", () => {
 
   const swiperContainer = document.querySelector(".service__swiper");
   const furtherContainer = document.querySelector(".service__further");
   const furtherText = document.querySelector(".service__further-text");
-
 
   furtherContainer.addEventListener("click", (e) => {
     e.preventDefault();
@@ -45,3 +60,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+

@@ -36,6 +36,7 @@
   --border-radius: 20px;
 }
 
+
 body {
   font-family: 'TT Lakes', sans-serif;
   background-color: var(--color-main-white);
@@ -240,6 +241,13 @@ nav.menu-header {
   gap: 46px;
 
 }
+        /*тень панель*/
+/*.menu-header {*/
+/*  background-color: #fff;
+/*  padding: 20px;*/
+/*  border-radius: 8px 0 0 8px;
+/*  box-shadow: 4px 0 10px rgba(0,0,0,0.15);*/
+/*}*/
 
 .menu__button {
   border:  none;
@@ -271,7 +279,7 @@ nav.menu-header {
 .menu__body {
   display: flex;
   flex-direction: column;
-  gap: 185px;
+  gap: 175px;
 }
 
 
@@ -279,34 +287,30 @@ nav.menu-header {
 .menu-list {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 26px;
   list-style: none;
 }
 
-.menu__item:not(.menu__item--style) a {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  color: #1B1C21 ;
-  padding-left: 24px;
-  text-decoration: none;
+/*.menu__item:not(.menu__item--style) a {*/
+/*  font-weight: 500;*/
+/*  font-size: 16px;*/
+/*  line-height: 24px;*/
+/*  color: #1B1C21;*/
+/*  padding-left: 24px;*/
+/*  text-decoration: none;*/
+/*}*/
 
+      /*анимация кнопок меню при наведении курсора*/
+.menu__item a:hover span {
+  color: #7E7E82;
 }
 
-   /*Подсвечивание кнопок меню при наведении курсора*/
+.menu__item a:hover .menu__icon {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .menu__item a {
-  transition: color 0.3s ease;
-}
-.menu__item--style a:hover {
-  color: rgba(0, 255, 255, 0.8);
-  text-shadow: 0 0 4px rgba(4, 246, 205, 0.3);
-}
-.menu__item:not(.menu__item--style) a:hover {
-  color: rgba(0, 255, 255, 0.8);
-  text-shadow: 0 0 4px rgba(65, 246, 215, 0.3);
-}
-
-.menu__item--style a {
   display: flex;
   align-items: center;
   gap: 24px;
@@ -314,11 +318,13 @@ nav.menu-header {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #7E7E82;
+  color: #1B1C21;
+  overflow: hidden;
 }
- /*пустой блок*/
-.empty-block {
- height: 90px;
+
+.menu__icon {
+  opacity: 0;
+  transform: translateX(-5px);
 }
 
 .menu__footer  {
@@ -402,6 +408,7 @@ nav.menu-header {
 .service__swiper {
   display:  flex;
   gap: 32px;
+  flex-wrap: wrap;
   justify-content: space-around;
 
 }
@@ -432,6 +439,11 @@ nav.menu-header {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+}
+
+.swiper-slide:last-child {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 
@@ -524,8 +536,8 @@ nav.menu-header {
       /*сервисная панель 1*/
   .service__swiper {
     width: 100%;
-    min-width: 0;        /* важно внутри flex-родителя */
-    flex: 0 0 100%;      /* не даём слайдеру сжиматься */
+    min-width: 0;
+    flex: 0 0 100%;
     overflow: hidden;
   }
 
@@ -568,7 +580,7 @@ nav.menu-header {
   }
 
   .service__swiper-wrapper {
-    position: relative; /* для псевдоэлементов */
+    position: relative;
   }
 
   .service__swiper-wrapper::before,
@@ -592,6 +604,9 @@ nav.menu-header {
     background: linear-gradient(to left, #F8F8F8, #F8F8F800);
   }
 
+  .swiper-slide:last-child {
+    display: none;
+  }
 
 }
 
@@ -678,6 +693,7 @@ nav.menu-header {
   .swiper-slide {
     flex: 0 0 224px;
     height: 72px;
+    /*position: relative;*/
 
   }
 
@@ -686,9 +702,12 @@ nav.menu-header {
     flex-wrap: wrap;
     gap: 24px;
     justify-content: center;
-
+    align-items: center;
 
   }
+
+
+
 
   .service__swiper.show-all .swiper-slide {
     display: block
@@ -701,20 +720,20 @@ nav.menu-header {
   }
 
   .service__swiper {
-    overflow: visible; /* отключаем прокрутку Swiper */
+    overflow: visible;
     display: flex;
     justify-content: space-around;
   }
   .swiper-slide {
-    flex: 0 0 224px;  /* фикс ширина */
+    flex: 0 0 224px;
     height: 72px;
 
   }
   .swiper-wrapper {
     display: flex;
-    flex-wrap: wrap; /* перенос карточек */
-    gap: 24px; /* расстояние между ними */
-    justify-content: center; /* выравнивание внутри */
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
 
   }
   .service__swiper.show-all .swiper-slide {
@@ -838,21 +857,21 @@ nav.menu-header {
   }
 
   .service__swiper {
-    overflow: visible; /* отключаем прокрутку Swiper */
+    overflow: visible;
      width: 1032px;
-    /*justify-content: space-around;*/
+    justify-content: space-around;
   }
 
   .swiper-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+                   /*justify-content: center;*/
     gap: 24px;
   }
 
 
   .swiper-slide {
-    flex: 0 0 240px;  /* фикс ширина */
+    flex: 0 0 240px;
     height: 72px;
 
   }
